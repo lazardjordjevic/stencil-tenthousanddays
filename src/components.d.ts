@@ -6,56 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface TenthousanddaysRoot {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLTenthousanddaysRootElement extends Components.TenthousanddaysRoot, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLTenthousanddaysRootElement: {
+        prototype: HTMLTenthousanddaysRootElement;
+        new (): HTMLTenthousanddaysRootElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "tenthousanddays-root": HTMLTenthousanddaysRootElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface TenthousanddaysRoot {
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "tenthousanddays-root": TenthousanddaysRoot;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "tenthousanddays-root": LocalJSX.TenthousanddaysRoot & JSXBase.HTMLAttributes<HTMLTenthousanddaysRootElement>;
         }
     }
 }
